@@ -34,12 +34,7 @@ const MovieDetails = () => {
   return (
     <>
       <Section>
-        {location.state ? (
-          <LinkBack to={backLinkHref}>Go back</LinkBack>
-        ) : (
-          <LinkBack to="/">Go back</LinkBack>
-        )}
-
+         <LinkBack to={backLinkHref}>Go back</LinkBack>
         <WrapperDetails>
           {isLoading && <Loader />}
           {error && <p>Oops, some error:{error}</p>}

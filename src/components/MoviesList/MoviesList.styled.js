@@ -5,13 +5,14 @@ export const Title = styled.h2`
   margin-bottom: 20px;
 `;
 
-export const MovieSearchList = styled.ul`
+
+export const MovieList = styled.ul`
   margin-left: 50px;
   margin-bottom: 15px;
   list-style-type: disc;
 `;
 
-export const MovieSearchItem = styled.li`
+export const FilmsItem = styled.li`
   margin-bottom: 5px;
 
   :hover,

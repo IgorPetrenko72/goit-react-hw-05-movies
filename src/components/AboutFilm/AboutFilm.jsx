@@ -20,9 +20,9 @@ export const AboutFilm = ({
     <>
       <img
         src={
-          poster_path === null
-            ? imageNotFound
-            : `https://image.tmdb.org/t/p/w500/${poster_path}`
+          poster_path 
+            ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+            : imageNotFound
         }
         alt={title}
         width="300"

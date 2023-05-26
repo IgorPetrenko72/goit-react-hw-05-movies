@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Loader } from 'components/Loader/Loader';
 import { getTrandingApi } from 'serviceApi/getTrandingApi';
 import { Section, Title, FilmsList } from './Home.styled';
-import { TrendingItem } from 'components/TrendingItem/TrendingItem';
+import { MovieList } from 'components/MoviesList/MoviesList';
 
  const Home = () => {
   const [trending, setTrending] = useState([]);
@@ -28,7 +28,8 @@ import { TrendingItem } from 'components/TrendingItem/TrendingItem';
       <Section>
         <Title>Trending today</Title>
         <FilmsList>
-          {trending && <TrendingItem trending={trending} />}
+          {trending && <MovieList movies={trending} />
+          }
         </FilmsList>
       </Section>
 

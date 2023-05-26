@@ -34,5 +34,9 @@ export const ReviewsList = ({ reviews }) => {
 };
 
 ReviewsList.propTypes={
-  reviews:PropTypes.arrayOf(PropTypes.shape())
+  reviews: PropTypes.arrayOf(PropTypes.shape({
+  id: PropTypes.string,
+  author: PropTypes.string.isRequired,
+  content : PropTypes.string.isRequired,
+  }))
 }

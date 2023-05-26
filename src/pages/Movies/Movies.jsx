@@ -3,10 +3,11 @@ import { useSearchParams } from 'react-router-dom';
 
 import { Loader } from 'components/Loader/Loader';
 import { SearchForm } from 'components/SearchForm/SearchForm';
-import { SearchResults } from 'components/SearchResults/SearchResults';
+import { MovieList } from 'components/MoviesList/MoviesList';
 import { getMovieSearch } from 'serviceApi/getMovieSearch';
 
 import { Section } from './Movie.styled';
+import { Title } from 'components/MoviesList/MoviesList.styled';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -43,7 +44,8 @@ const Movies = () => {
 
       {movies.length > 0 && (
         <Section>
-          <SearchResults movies={movies} />
+          <Title>Search results</Title>
+          <MovieList movies={movies} />
         </Section>
       )}
       {nothingFound && (
